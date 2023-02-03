@@ -1,3 +1,4 @@
+//Create Button for Spin
 let name_of_button = document.createTextNode("SPIN")
 newDiv = document.createElement("div")
 spinButton = document.createElement("button")
@@ -7,6 +8,7 @@ spinButton.className = "spin"
 let currentDiv = document.querySelector(".container")
 currentDiv.appendChild(newDiv)
 
+//Create Div for Items
 let parentDiv = document.querySelector(".item")
 for(let i=0; i<3; i++){
     let childDiv = document.createElement("div");
@@ -14,6 +16,7 @@ for(let i=0; i<3; i++){
     parentDiv.appendChild(childDiv);
 }
 
+//Create Input for the Result
 resultDiv = document.createElement("div")
 resultInput = document.createElement("input")
 resultInput.type = "text"
@@ -23,6 +26,7 @@ resultDiv.appendChild(resultInput)
 let result = document.querySelector(".res")
 result.appendChild(resultDiv)
 
+//Create div for the cash
 CashDiv = document.createElement("div")
 CashDiv.className = "amount"
 name_of_cash = document.createTextNode("Cash")
@@ -43,6 +47,7 @@ CashDiv.append(cashP, cashSign, cashValue)
 let currentDiv1 = document.querySelector(".cash")
 currentDiv1.appendChild(CashDiv)
 
+//create images
 let slot = document.getElementsByClassName("item2")
 let images =  ["./images/images13.jpg", "images./image3.png", "./images/image4.jpg", "./images/image5.jpg", "./images/image14.jpg", "./images/image9.png", "./images/image11.jfif", "./images/image12.png" ]
 images.forEach(function(src){
@@ -51,8 +56,7 @@ images.forEach(function(src){
     newImg.style.display = "none";
     CashDiv.appendChild(newImg)
 })
-
-images[0].className = "icon"
+//function for clicking on the button
 spinButton.addEventListener("click", function play(){
     let randomIndex1 = Math.floor(Math.random()*images.length)
     let randomIndex2 = Math.floor(Math.random()*images.length)
@@ -60,12 +64,12 @@ spinButton.addEventListener("click", function play(){
     slot[0].innerHTML = `<img src="${images[randomIndex1]}" class="icon">`
     slot[1].innerHTML = `<img src="${images[randomIndex2]}" class="icon">`
     slot[2].innerHTML = `<img src="${images[randomIndex3]}" class="icon">`
-    if(slot[0].textContent == slot[1].textContent == slot[2].textContent){
-        result.textContent = "You won!"
+    if(slot[0].innerHTML == slot[1].innerHTML == slot[2].innerHTML){
+        resultInput.value = "You won!"
         cashValue.value = cashValue.value +=10
     }
     else{
-        result.textContent = "You lose!"
+        resultInput.value = "You lose!"
         cashValue.value = cashValue.value -=10;
         if(cashValue.value<=0){
             cashValue.value=0;
@@ -73,6 +77,7 @@ spinButton.addEventListener("click", function play(){
         }
     }
 })
+
 
 
 
