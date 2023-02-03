@@ -2,7 +2,7 @@
   let box = document.querySelectorAll("#container");
 
   function slot() {
-    const a = [7 ,7 ,7] ;
+    const a = ["7 7 7"] ;
 
 
     const newDiv = document.createElement("div");
