@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+body{
+    background-image: url("./images/b25.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.container{
+    display: flex;
+margin:10% 40% 5% 46%;
+}
+
+.spin{
+    width: 100px;
+    height: 50px;
+    background-color: greenyellow;
+    color: orangered;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.images{
+    display: flex;
+    height: 200px;
+    width: 200px;
+}
+
+.picture{
+    display: hidden;
+}
+.icon{
+    background-size: cover;
+    
+}
+.item{
+    height: 200px;
+    margin-left: 30%;
+    display: flex;
+   overflow: hidden;
+   
+    
+}
+
+.item2{
+   border: 2px solid black;
+    width: 200px;
+    height: 150px;
+    display: flex; 
+}
+
+.res{
+    margin-left: 40%;
+    margin-bottom: 5%;
+}
+
+.result{
+   border: 2px solid black;
+   width: 200px;
+   height: 50px;
+
+}
+
+.amount{
+    position: absolute;
+    display: flex;
+    border: 2px solid black;
+    width: 500px;
+    margin-left: 30%;
+}
+
+.cashtxt{
+    
+    margin-left: 20%px;
+}
+
+.signtxt{
+    
+    margin-left: 78%;
+}
+
+.valuetxt{
+    width: 50px;
+    
+    padding-right: 2%;
+}
