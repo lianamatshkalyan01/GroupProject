@@ -64,19 +64,30 @@ spinButton.addEventListener("click", function play(){
     slot[0].innerHTML = `<img src="${images[randomIndex1]}" class="icon">`
     slot[1].innerHTML = `<img src="${images[randomIndex2]}" class="icon">`
     slot[2].innerHTML = `<img src="${images[randomIndex3]}" class="icon">`
-    if(slot[0].innerHTML == slot[1].innerHTML == slot[2].innerHTML){
-        resultInput.value = "You won!"
-        cashValue.value = cashValue.value +=10
-    }
-    else{
-        resultInput.value = "You lose!"
-        cashValue.value = cashValue.value -=10;
-        if(cashValue.value<=0){
-            cashValue.value=0;
-            alert("You don't have enough cash")
+    let intervalId = setInterval(() => {
+        randomIndex1 = Math.floor(Math.random() * images.length);
+        randomIndex2 = Math.floor(Math.random() * images.length);
+        randomIndex3 = Math.floor(Math.random() * images.length);
+        slot[0].innerHTML = `<img src="${images[randomIndex1]}" class="icon">`;
+        slot[1].innerHTML = `<img src="${images[randomIndex2]}" class="icon">`;
+        slot[2].innerHTML = `<img src="${images[randomIndex3]}" class="icon">`;
+    }, 500);
+    
+    setTimeout(() => {
+        clearInterval(intervalId);
+        if (slot[0].innerHTML === slot[1].innerHTML && slot[1].innerHTML === slot[2].innerHTML) {
+            resultInput.value = "You won!";
+            cashValue.value = cashValue.value += 10;
+        } else {
+            resultInput.value = "You lose!";
+            cashValue.value = cashValue.value -= 10;
+            if (cashValue.value <= 0) {
+                cashValue.value = 0;
+                alert("You don't have enough cash");
+            }
         }
-    }
-})
+    }, 3000);
+});
 
 
 
