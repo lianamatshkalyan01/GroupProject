@@ -4,11 +4,11 @@ const num3 = document.getElementById('thirdbox');
 
 const items = ["<img src=\"Icons/Club.png\" alt = \"Club\">", 
                "<img src=\"Icons/Diamond.png\" alt = \"Diamond\">", 
-            //    "<img src=\"Icons/Spade.png\" alt = \"Spade\">", 
-            //    "<img src=\"Icons/Heart.png\" alt = \"Heart\">",
-            //    "<img src=\"Icons/Dollar.png\" alt = \"Dollar\">",
-            //    "<img src=\"Icons/Surprise.png\" alt = \"Surprise\">",
-            //    "<img src=\"Icons/Seven.png\" alt = \"Seven\">"
+               "<img src=\"Icons/Spade.png\" alt = \"Spade\">", 
+               "<img src=\"Icons/Heart.png\" alt = \"Heart\">",
+               "<img src=\"Icons/Dollar.png\" alt = \"Dollar\">",
+               "<img src=\"Icons/Surprise.png\" alt = \"Surprise\">",
+               "<img src=\"Icons/Seven.png\" alt = \"Seven\">"
             ];
 
 const spinbtn = document.getElementById('spin_button');
