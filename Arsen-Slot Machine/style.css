@@ -1,0 +1,94 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("Icons/Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main_container{
+    width: 400px;
+    height: 650px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 3px solid black;
+}
+.screen{
+    height: 290px;
+    background-color: rgb(121, 122, 136);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#firstbox{
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    border: 6px solid red;
+    margin: 10px;
+}
+#secondbox{
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    border-style: solid;
+    border: 7px solid red;
+    margin: 10px;
+}
+#thirdbox{
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    border-style: solid;
+    border: 7px solid red;
+    margin: 10px;
+}
+#balance{
+    height: 60px;
+    font-size: 30px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#result{
+    height: 150px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.buttons{
+    height: 150px;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#spin_button{
+    width: 200px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 50% 20% / 0% 40%;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+#spin_button:hover {
+    background-color: white;
+    color: black;
+  }
+#betcount{
+    width: 220px;
+
+}
